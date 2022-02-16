@@ -1,6 +1,7 @@
 function buildTrie(...words) {
-  // Implement me! :)
-  console.log(words)
+    let arbol = {};
+    for (let word of words) {
+    }
 }
 
     // describe("Example Tests", function(){
