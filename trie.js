@@ -1,8 +1,7 @@
 function buildTrie(...words) {
-    const trie = new trie();
-    words.forEach(word => trie.insert(word));
-    return trie;
-    }
+  // Implement me! :)
+  console.log(words)
+}
 
     // describe("Example Tests", function(){
     //     it("should work with example tests", function(){
