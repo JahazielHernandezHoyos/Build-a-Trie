@@ -1,10 +1,16 @@
-function buildTrie(...words) {
+function buildTrie(...palabras) {
     let arbol = {};
-    for (let word of words) {
-      if(word === "")
+    for (let palabra of palabras) {
+      console.log(palabra)
+      if(palabra === "")
         //si word es igual a "" añade el nodo al arbol
-        word = {};
+        palabra = {};
         else{
+        for (let letras of palabra) {
+          console.log(letras)
+          arbol[letras] = {};
+          console.log(arbol)
+        }
         }
     }
     return arbol;
