@@ -1,6 +1,8 @@
 function buildTrie(...words) {
     let arbol = {};
     for (let word of words) {
+      console.log(word)
+    return arbol
     }
 }
 
