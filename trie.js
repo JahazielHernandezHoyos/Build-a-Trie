@@ -1,9 +1,13 @@
 function buildTrie(...words) {
     let arbol = {};
     for (let word of words) {
-      console.log(word)
-    return arbol
+      if(word === "")
+        //si word es igual a "" añade el nodo al arbol
+        word = {};
+        else{
+        }
     }
+    return arbol;
 }
 
     // describe("Example Tests", function(){
