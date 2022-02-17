@@ -3,10 +3,14 @@ def build_trie(*words):
     for palabra in words:
         nodo = arbol
         if palabra == "":
-            palabra = {palabra: None}
+            palabra = {}
             return arbol
         for letra in palabra:
-            nodo = nodo.setdefault(letra, {})
-        nodo[palabra] = None
-        #nodo = nodo.setdefault(None, None)
+            #sumar la palabra anterior al nodo
+            if letra in nodo:
+                nodo[letra].update(palabra)
+                nodo[letra].update(palabra[letra])
+            else:
+                nodo[letra] = palabra[letra]
+            nodo = nodo.int([letra])
     return arbol
