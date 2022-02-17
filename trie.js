@@ -1,19 +1,20 @@
 function buildTrie(...palabras) {
     let arbol = {};
-    for (let palabra of palabras) {
-      console.log(palabra)
+    let nodo = arbol;
+    for (let palabra of palabras){
       if(palabra === "")
         //si word es igual a "" añade el nodo al arbol
         palabra = {};
-        else{
-        for (let letras of palabra) {
-          console.log(letras)
-          arbol[letras] = {};
-          console.log(arbol)
+      else{
+      for (let i = 0; i < palabra.length; i++) {
+        console.log(i)
+        if (!arbol[palabra[i]]) {
+          arbol[palabra[i]] = {};
         }
-        }
-    }
-    return arbol;
+        nodo = nodo[palabra[i]];
+      }
+    }};
+  return arbol;
 }
 
     // describe("Example Tests", function(){
