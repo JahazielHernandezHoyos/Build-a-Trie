@@ -1,16 +1,12 @@
 def build_trie(*words):
     arbol = {}
-    nodo = arbol
     for palabra in words:
+        nodo = arbol
         if palabra == "":
             palabra = {}
             return arbol
-        else:
-            palabra = palabra[0]
         for letra in palabra:
-            if letra not in nodo:
-                nodo[letra] = {}
-            nodo = nodo[letra]
-        nodo[""] = None
-        nodo = arbol
+            nodo = nodo.setdefault(letra, {})
+        nodo[None] = None
+        nodo = nodo.setdefault(None, None)
     return arbol
